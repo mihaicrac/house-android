@@ -40,23 +40,23 @@ public class MainActivity extends AppCompatActivity {
 
         );
 
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(task -> {
-                    if (!task.isSuccessful()) {
-                        Log.w("MyActivity", "getInstanceId failed", task.getException());
-                        return;
-                    }
-
-                    // Get new Instance ID token
-                    String token = task.getResult().getToken();
-
-                    // Log and toast
-                    Log.d("MyActivity", token);
-                    Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();
-
-                    sendFirebaseToken(token);
-
-                });
+//        FirebaseInstanceId.getInstance().getInstanceId()
+//                .addOnCompleteListener(task -> {
+//                    if (!task.isSuccessful()) {
+//                        Log.w("MyActivity", "getInstanceId failed", task.getException());
+//                        return;
+//                    }
+//
+//                    // Get new Instance ID token
+//                    String token = task.getResult().getToken();
+//
+//                    // Log and toast
+//                    Log.d("MyActivity", token);
+//                    Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();
+//
+//                    sendFirebaseToken(token);
+//
+//                });
     }
 
     @Override
